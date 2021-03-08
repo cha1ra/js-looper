@@ -33,17 +33,25 @@ export default {
   data () {
     return {
       tempo: 60,
-      clicking: false
+      clicking: false,
+      timeoutId: null
     }
   },
   methods: {
     setClicking (flag) {
       this.clicking = flag
-      flag && this.click()
+      if (flag) {
+        this.click()
+      } else {
+        this.timeoutId !== null && clearTimeout(this.timeoutId)
+        this.timeoutId = null
+      }
     },
     click () {
       console.log('click!')
-      this.clicking && setTimeout(this.click, 1000)
+      if (this.clicking) {
+        this.timeoutId = setTimeout(this.click, 1000)
+      }
     }
   }
 }
