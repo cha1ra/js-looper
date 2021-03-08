@@ -1,20 +1,12 @@
 # js-looper
 
-## Build Setup
+## 実装したい機能
 
-```bash
-# install dependencies
-$ yarn install
+- メトロノーム(今回の実装範囲)
+  - メトロノームのON/OFFを切り替えることができる
+  - 入力した数値に応じてクリック音の速度が変わる
+  - クリック音がなるタイミングでライトが点滅する
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+- 複数音声の録音(TBD)
+- 録音音声の再生/停止(TBD)
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
